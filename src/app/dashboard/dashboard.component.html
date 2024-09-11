@@ -1,0 +1,70 @@
+<div class="w-full">
+    <div class="relative right-0 p-4">
+        <ul class="relative flex items-center justify-center h-14 list-none rounded-xl bg-blue-gray-50 text-dark-400"
+            data-tabs="tabs" role="list">
+            <li (click)="active($event)" class="z-30 flex-auto text-center">
+                <a class="z-30 flex items-center justify-center w-full px-0 py-2 text-sm mb-0 transition-all ease-in-out border-0 rounded-md cursor-pointer  bg-inherit ">
+                    Budgets
+                </a>
+            </li>
+            <li (click)="active($event)" class="z-30 flex-auto text-center">
+                <a class="z-30 flex items-center justify-center w-full px-0 py-2 text-sm mb-0 transition-all ease-in-out border-0 rounded-md cursor-pointer bg-inherit">
+                    Orders
+                </a>
+            </li>
+            <li (click)="active($event)" class="z-30 flex-auto text-center">
+                <a class="z-30 flex items-center justify-center w-full px-0 py-2 text-sm mb-0 transition-all ease-in-out border-0 rounded-md cursor-pointer bg-inherit">
+                    Invoices
+                </a>
+            </li>
+            <li (click)="active($event)" class="z-30 flex-auto text-center">
+                <a class="z-30 flex items-center justify-center w-full px-0 py-2 mb-0 text-sm transition-all ease-in-out border-0 rounded-lg cursor-pointer bg-inherit">
+                    Clients
+                </a>
+            </li>
+            <li (click)="active($event)" class="z-30 flex-auto text-center">
+                <a class="z-30 flex items-center justify-center w-full px-0 py-2 text-sm mb-0 transition-all ease-in-out border-0 rounded-lg cursor-pointe bg-inherit">
+                    Products
+                </a>
+            </li>
+            <div id="tabActive" class="w-[19%] h-10 bg-white absolute rounded-xl left-0 m-2"></div>
+        </ul>
+
+    </div>
+</div>
+
+<div class="w-full flex gap-2">
+    <div class="w-[40%] p-4">
+        <div class="relative flex flex-col text-gray-700 bg-white shadow-md w-full rounded-xl bg-clip-border">
+            <nav class="flex min-w-[240px] flex-col gap-1 p-2 font-sans text-base font-normal text-blue-gray-700">
+                <div role="button"
+                    class="flex justify-between items-center w-full p-3 leading-tight transition-all rounded-lg outline-none text-start  hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900">
+                   
+                    <div>
+                        <h6
+                            class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
+                            Company name
+                        </h6>
+                        <p class="block font-sans text-sm antialiased font-normal leading-normal text-gray-700">
+                            01/01/2024
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <button class="btnDark hover:bg-blue-gray-300" type="submit">
+                            View Budget
+                        </button>
+                    </div>
+                </div>
+
+            </nav>
+        </div>
+    </div>
+    <div class="w-[60%] p-2">
+        
+        <div class="w-full h-screen flex items-center justify-center">
+           <img src="./assets/finance-app-1-98.svg" alt="">
+              
+        </div>
+
+    </div>
+</div>

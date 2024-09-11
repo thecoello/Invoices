@@ -1,0 +1,84 @@
+<div class="relative flex flex-col text-gray-700 bg-transparent shadow-none rounded-xl bg-clip-border">
+    <h4 class="block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+        Add new Client
+    </h4>
+    <form [formGroup]="formClient" (ngSubmit)="submit()" class="max-w-screen-lg mt-8 mb-2 w-[50%] sm:w-[50%]">
+        <div class="flex flex-col gap-6 mb-1">
+
+            <h6 class="labelStyle -mb-3">
+                Name *
+            </h6>
+            <div class="relative h-11 w-full min-w-[200px]">
+
+                <input formControlName="name"  type="text" placeholder="Contact Name"
+                    class="{{validateError('name') ? 'inputStyleError' : validateTouched('name') ? 'inputStyleOk' : 'inputStyle'}}" required/>
+            </div>
+
+            <h6 class="labelStyle -mb-3">
+                Your Email *
+            </h6>
+            <div class="relative h-11 w-full min-w-[200px]">
+                <input formControlName="email" type="email" placeholder="name@mail.com"
+                class="{{validateError('email') ? 'inputStyleError' : validateTouched('email') ? 'inputStyleOk' : 'inputStyle'}}" required/>
+            </div>
+
+            <div class="flex gap-6">
+                <div class="w-[50%] flex flex-col">
+                    <h6 class="labelStyle">
+                        Company name *
+                    </h6>
+                    <div class="relative h-11 w-full min-w-[200px]">
+                        <input formControlName="companyName" type="text" placeholder="Company name" class="{{validateError('companyName') ? 'inputStyleError' : validateTouched('companyName') ? 'inputStyleOk' : 'inputStyle'}}" required/>
+                    </div>
+                </div>
+
+                <div class="w-[50%] flex flex-col">
+                    <h6 class="labelStyle">
+                        Vat number (optional)
+                    </h6>
+                    <div class="relative h-11 w-full min-w-[200px]">
+                        <input formControlName="vatNumber" type="text" placeholder="00000000" class="inputStyle"/>
+
+                    </div>
+                </div>
+            </div>
+
+            <h6 class="labelStyle -mb-3">
+                Address *
+            </h6>
+            <div class="flex gap-6">
+                <div class="relative h-11 w-full min-w-[200px]">
+                    <input formControlName="streetName" type="text" placeholder="Street name"
+                    class="{{validateError('streetName') ? 'inputStyleError' : validateTouched('streetName') ? 'inputStyleOk' : 'inputStyle'}}" required />
+                </div>
+                <div class="relative h-11 w-[20%] min-w-[200px]">
+                    <input formControlName="numberLetterAddress" type="string" placeholder="Number / Letter"
+                    class="{{validateError('numberLetterAddress') ? 'inputStyleError' : validateTouched('numberLetterAddress') ? 'inputStyleOk' : 'inputStyle'}}" required/>
+                </div>
+            </div>
+
+            <div class="flex gap-6">
+                <div class="relative h-11 w-full min-w-[200px]">
+                    <input formControlName="country" type="text" placeholder="Country"
+                    class="{{validateError('country') ? 'inputStyleError' : validateTouched('country') ? 'inputStyleOk' : 'inputStyle'}}" required/>
+                </div>
+
+                <div class="relative h-11 w-full min-w-[200px]">
+                    <input formControlName="city" type="text" placeholder="City"  class="{{validateError('city') ? 'inputStyleError' : validateTouched('city') ? 'inputStyleOk' : 'inputStyle'}}" required/>
+                </div>
+
+                <div class="relative h-11 w-full min-w-[200px]">
+                    <input formControlName="zipCode" type="number" placeholder="ZIP Code"
+                    class="{{validateError('zipCode') ? 'inputStyleError' : validateTouched('zipCode') ? 'inputStyleOk' : 'inputStyle'}}" required/>
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="btnDark" type="submit" [disabled]="formClient.invalid">
+            Create client
+        </button>
+
+    </form>
+</div>
